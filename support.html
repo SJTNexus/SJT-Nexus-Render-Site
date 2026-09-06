@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/sjt.ico">
+    <title>Support the Developer</title>
+    <style>
+        :root {
+            --primary-color: #0070ba; /* Trusted PayPal Blue */
+            --secondary-color: #00b0ff;
+            --upi-color: #0d8c54; /* Clean UPI Green */
+            --text-color: #333333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px 30px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            color: #111;
+        }
+
+        .header p {
+            margin: 0;
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Grid Split */
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .section-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .section-card.india {
+            border-top: 4px solid var(--upi-color);
+        }
+
+        .section-card.international {
+            border-top: 4px solid var(--primary-color);
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notice {
+            font-size: 13px;
+            color: #666;
+            background: #f8fafc;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 3px solid #cbd5e1;
+        }
+
+        .notice.warning {
+            border-left-color: #ef4444;
+            color: #991b1b;
+            background: #fef2f2;
+        }
+
+        /* Form Details Styling */
+        .details-group {
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .detail-item strong {
+            color: #555;
+            display: inline-block;
+            width: 120px;
+        }
+
+        /* Buttons Styling */
+        .btn {
+            display: inline-block;
+            text-align: center;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-weight: 6px;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .btn-upi {
+            background-color: var(--upi-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-upi:hover {
+            background-color: #0a6f42;
+        }
+
+        .btn-paypal {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-paypal:hover {
+            background-color: #005ea6;
+        }
+
+        /* Responsive Breakpoint for Mobile Screens */
+        @media (max-width: 768px) {
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Support SJT Nexus App Development</h1>
+        <p>This application is free and open-access. If you find it valuable, you can choose your own price to sponsor future independent updates and development.</p>
+    </div>
+
+    <div class="payment-grid">
+        
+        <!-- COLUMN 1: INDIAN USERS -->
+        <div class="section-card india">
+            <div>
+                <h2>🇮🇳 For Users in India</h2>
+                <div class="notice">
+                    Use your preferred Indian banking apps or UPI apps for instant zero-fee routing.
+                </div>
+                
+                <div class="details-group">
+                    <div class="detail-item"><strong>UPI ID:</strong><img src="images/upi_sjt.png" alt="9847700757@ptsbi" width="150" height="150"></div>
+                </div>
+
+                <!-- UPI Deep Link: Launches apps like GPay/PhonePe automatically on mobile -->
+                <a href="upi://pay?pn=SUNIL JOSE THAYIL&pa=9847700757@ptsbi&cu=INR" class="btn btn-upi">📲 Pay via Any UPI App</a>
+
+                <hr style="border: 0; border-top: 1px dashed #e2e8f0; margin: 25px 0;">
+
+                <div class="details-group">
+                    <div class="detail-item"><strong>Account Name:</strong> Sunil Jose Thayil</div>
+                    <div class="detail-item"><strong>Bank Name:</strong> South Indian Bank Ltd.</div>
+                    <div class="detail-item"><strong>Account No:</strong> 0001053000008802</div>
+                    <div class="detail-item"><strong>IFSC Code:</strong> SIBL0000001</div>
+                </div>
+            </div>
+            <p style="font-size: 12px; color: #999; margin: 0; text-align: center;">Supports NEFT / IMPS / RTGS Transfers</p>
+        </div>
+
+        <!-- COLUMN 2: INTERNATIONAL USERS -->
+        <div class="section-card international">
+            <div>
+                <h2>🌐 For International Users</h2>
+                <div class="notice warning">
+                    <strong>Important:</strong> Foreign currency sent to standard domestic Indian UPI IDs or direct bank codes will fail. International users must use the PayPal route below.
+                </div>
+                
+                <p style="font-size: 15px; line-height: 1.5; color: #555; margin-bottom: 25px;">
+                    Payments are securely processed via PayPal as a software service purchase. You can choose a custom tier amount using your international cards or PayPal account.
+                </p>
+            </div>
+
+            <div>
+                <!-- Replace the # with your actual PayPal Business "No-Code" Checkout URL -->
+                <h6 style="color: #444; font-size: 15px; font-weight: 600; text-align: center; margin: 10px 0; font-family: sans-serif;">
+                     💳 Online card and PayPal payments are coming soon! 
+
+                </h6>
+                <p style="font-size: 12px; color: #999; margin: 15px 0 0 0; text-align: center;">Secure 256-bit encrypted global checkout</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

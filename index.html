@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SJT Nexus</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/sjt.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        /* =========================================================
+           SJT NEXUS VERSION CARDS
+           ========================================================= */
+
+        .version-section {
+            margin-top: 70px;
+        }
+
+        .version-section h2 {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .version-intro {
+            max-width: 720px;
+            margin: 0 auto 35px auto;
+            text-align: center;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .version-card {
+            border-radius: 14px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            min-height: 330px;
+            box-sizing: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .version-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 26px rgba(0, 0, 0, 0.10);
+        }
+
+        /* Online card */
+        .version-card.online {
+            background: #eef8fc;
+            border-top: 5px solid #1597c8;
+        }
+
+        /* Desktop card */
+        .version-card.desktop {
+            background: #f3f0fb;
+            border-top: 5px solid #7057b8;
+        }
+
+        .version-icon {
+            font-size: 36px;
+            margin-bottom: 14px;
+        }
+
+        .version-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 23px;
+            color: #222;
+        }
+
+        .version-description {
+            margin: 0 0 20px 0;
+            color: #555;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .version-benefits {
+            margin: 0 0 25px 0;
+            padding: 0;
+            list-style: none;
+            color: #444;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .version-benefits li {
+            margin-bottom: 4px;
+        }
+
+        .version-button {
+            display: inline-block;
+            width: 100%;
+            margin-top: auto;
+            padding: 13px 18px;
+            box-sizing: border-box;
+            border-radius: 7px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .online-button {
+            background: #1597c8;
+            color: #ffffff;
+        }
+
+        .online-button:hover {
+            background: #117da6;
+        }
+
+        .desktop-button {
+            background: #7057b8;
+            color: #ffffff;
+        }
+
+        .desktop-button:hover {
+            background: #59439b;
+        }
+
+        .version-note {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* =========================================================
+           MOBILE RESPONSIVE LAYOUT
+           ========================================================= */
+
+        @media (max-width: 768px) {
+            .version-section {
+                margin-top: 50px;
+            }
+
+            .version-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .version-card {
+                min-height: auto;
+                padding: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header>
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                <img src="/images/sjt-logo.png" alt="SJT Nexus" class="logo-img">
+                <span>SJT Nexus</span>
+            </a>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#versions">Application</a>
+                <a href="#videos">YouTube</a>
+                <a href="#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- =====================================================
+             HOME
+             ===================================================== -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">SJT Nexus</span>
+
+                <h1>
+                    Practical Tools.<br>
+                    Powered by AI.
+                </h1>
+
+                <p>
+                    SJT Nexus is a collection of practical applications designed
+                    to make useful technology simple and accessible.
+                </p>
+
+                <a href="#versions" class="btn">
+                    Explore SJT Nexus
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SJT NEXUS ONLINE / DESKTOP
+             ===================================================== -->
+
+        <section id="versions" class="version-section">
+
+            <h2>Choose Your SJT Nexus Version</h2>
+
+            <p class="version-intro">
+                SJT Nexus is available as an online application and as a
+                Windows desktop application. Choose the version that best
+                suits the way you want to use it.
+            </p>
+
+
+            <div class="version-grid">
+
+                <!-- =================================================
+                     ONLINE VERSION
+                     ================================================= -->
+
+                <div class="version-card online">
+
+                    <div>
+                        <div class="version-icon" aria-hidden="true">🌐</div>
+
+                        <h3>SJT Nexus Online</h3>
+
+                        <p class="version-description">
+                            Use SJT Nexus directly in your web browser without
+                            installing a desktop application.
+                        </p>
+
+                        <ul class="version-benefits">
+                            <li>✓ No installation required</li>
+                            <li>✓ Works in modern web browsers</li>
+                            <li>✓ Suitable for Windows, Mac and mobile devices</li>
+                            <li>✓ Use your own Google Gemini API key</li>
+                        </ul>
+                    </div>
+
+                    <a
+                        href="https://sjt-nexus-online-new.onrender.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="version-button online-button"
+                    >
+                        OPEN SJT NEXUS ONLINE ↗
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     DESKTOP VERSION
+                     ================================================= -->
+
+                <div class="version-card desktop">
+
+                    <div>
+                        <div class="version-icon" aria-hidden="true">💻</div>
+
+                        <h3>SJT Nexus Desktop</h3>
+
+                        <p class="version-description">
+                            Download and install the Windows desktop
+                            application for convenient use without a web browser.
+                        </p>
+
+                        <ul class="version-benefits">
+                            <li>✓ Windows desktop application</li>
+                            <li>✓ No browser required after installation</li>
+                            <li>✓ Use your own Google Gemini API key</li>
+                            <li>✓ Download the latest available release</li>
+                        </ul>
+                    </div>
+
+                    <a
+                        href="https://github.com/SJTNexus/SJT_Nexus_App_Setup.exe/releases/latest/download/SJT_Nexus_App_Setup.exe"
+                        class="version-button desktop-button"
+                    >
+                        DOWNLOAD FOR WINDOWS
+                    </a>
+
+                    <div class="version-note">
+                        Windows installer • Latest release
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             APPLICATION
+             ===================================================== -->
+
+        <section id="api-setup">
+
+            <h2>AI Quiz Generator</h2>
+
+            <p class="section-intro">
+                SJT Nexus uses Google Gemini to generate quizzes from your
+                chosen content. You provide your own Gemini API key, which
+                remains under your control.
+            </p>
+
+
+            <div class="grid-two">
+
+                <!-- API KEY CARD -->
+
+                <div class="api-card">
+
+                    <h3>Gemini API Key</h3>
+
+                    <p class="card-description">
+                        Enter your personal Google Gemini API key to use the
+                        AI features of SJT Nexus.
+                    </p>
+
+
+                    <div class="form-group">
+
+                        <label for="api-provider">
+                            AI Provider
+                        </label>
+
+                        <select id="api-provider" onchange="updateGenerationLink()">
+
+                            <option value="google">
+                                Google Gemini
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="api-key-input">
+                            Your Gemini API Key
+                        </label>
+
+                        <input
+                            type="password"
+                            id="api-key-input"
+                            placeholder="AIzaSy..."
+                            autocomplete="off"
+                            spellcheck="false"
+                        >
+
+                        <a
+                            id="keygen-link"
+                            href="https://aistudio.google.com/app/apikey"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="external-link"
+                        >
+                            🔑 Get your Google Gemini API Key ↗
+                        </a>
+
+                    </div>
+
+
+                    <div class="button-row">
+
+                        <button
+                            class="btn"
+                            onclick="saveKey()"
+                        >
+                            Save Key
+                        </button>
+
+                        <button
+                            class="btn btn-secondary"
+                            onclick="clearKey()"
+                        >
+                            Remove Key
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="status-box"
+                        class="status-msg"
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+
+                <!-- TEST CARD -->
+
+                <div class="test-card">
+
+                    <h3>Connection Test</h3>
+
+                    <p class="card-description">
+                        Check whether your Gemini API key is available in this
+                        browser.
+                    </p>
+
+
+                    <div class="form-group">
+
+                        <label for="test-prompt">
+                            Test Message
+                        </label>
+
+                        <input
+                            type="text"
+                            id="test-prompt"
+                            placeholder="Enter a short test message..."
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="btn"
+                        onclick="simulateApiCall()"
+                    >
+                        Test Connection
+                    </button>
+
+
+                    <div
+                        id="api-output"
+                        class="api-output"
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="notice-box">
+
+                <strong>About your API key</strong>
+
+                <p>
+                    SJT Nexus does not provide or share an API key.
+                    You use your own Google Gemini API key and remain
+                    responsible for its use and any applicable Google
+                    API charges or limits.
+                </p>
+
+                <p>
+                    This website stores the key locally in your browser
+                    when you choose to save it. Do not use this feature
+                    on a shared or public computer.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             YOUTUBE
+             ===================================================== -->
+
+        <section id="videos">
+
+            <h2>YouTube</h2>
+
+            <p class="section-intro">
+                Videos and demonstrations related to SJT Nexus,
+                practical technology and application development.
+            </p>
+
+
+            <div class="video-grid">
+
+                <!-- VIDEO 1 -->
+
+                <div class="video-card">
+
+                    <div class="video-wrapper">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/VIDEO_ID_1"
+                            title="SJT Nexus YouTube Video"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <span class="video-tag">
+                            SJT Nexus
+                        </span>
+
+                        <h3>
+                            SJT Nexus – Introduction
+                        </h3>
+
+                        <p>
+                            An introduction to SJT Nexus and the ideas
+                            behind the application.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VIDEO 2 -->
+
+                <div class="video-card">
+
+                    <div class="video-wrapper">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/VIDEO_ID_2"
+                            title="SJT Nexus Demonstration"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                    <div class="video-info">
+
+                        <span class="video-tag">
+                            Demonstration
+                        </span>
+
+                        <h3>
+                            SJT Nexus – Application Demo
+                        </h3>
+
+                        <p>
+                            A practical demonstration of the AI Quiz
+                            Generator and its features.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+             ===================================================== -->
+
+        <section id="about">
+
+            <h2>About SJT Nexus</h2>
+
+            <div class="grid-two">
+
+                <div>
+
+                    <h3>Purpose</h3>
+
+                    <p class="about-text">
+                        SJT Nexus is intended to provide practical,
+                        useful applications that combine straightforward
+                        design with modern technology.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>Our Approach</h3>
+
+                    <p class="about-text">
+                        The focus is on useful functionality, simplicity
+                        and responsible use of technology rather than
+                        unnecessary complexity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="donation-box">
+
+            <p class="support-title">
+                Find SJT Nexus useful?
+            </p>
+
+            <p class="support-text">
+                You can support the continued development of SJT Nexus.
+            </p>
+
+            <a
+                href="support.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="coffee-btn"
+            >
+                ☕ <span>Support SJT Nexus</span>
+            </a>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <p>
+                Questions or feedback?
+                <a href="mailto:thesjtnexus@gmail.com">
+                    thesjtnexus@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+
+        <p class="footer-text">
+            © 2026 SJT Nexus. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
